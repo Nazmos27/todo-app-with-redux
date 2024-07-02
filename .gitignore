@@ -12,6 +12,7 @@ dist
 dist-ssr
 *.local
 /todo-server/node_modules
+/todo-server/.env
 
 
 # Editor directories and files

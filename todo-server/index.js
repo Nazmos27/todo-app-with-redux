@@ -11,7 +11,7 @@ const cors = require('cors');
 app.use(cors());
 app.use(express.json());
 
-const uri = `mongodb+srv://sakib_24:3MoIIXKJe2AV8jeQ@cluster0.choi6e7.mongodb.net/todoDB?retryWrites=true&w=majority&appName=Cluster0`;
+const uri = process.env.URL
 
 const client = new MongoClient(uri, {
   useNewUrlParser: true,
@@ -22,7 +22,7 @@ const client = new MongoClient(uri, {
 const run = async () => {
   // await client.connect();
   try {
-    const db = client.db('todo');
+    const db = client.db('todoDB');
     const taskCollection = db.collection('tasks');
 
     // app.get('/tasks', async (req, res) => {
