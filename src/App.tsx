@@ -1,10 +1,9 @@
-import { Button } from "./components/ui/button";
+import Todo from "./pages/Todo";
 
 function App() {
   return (
     <>
-      <h1> To do app with redux</h1>
-      <Button>This is shadcdn button</Button>
+      <Todo/>
     </>
   );
 }
