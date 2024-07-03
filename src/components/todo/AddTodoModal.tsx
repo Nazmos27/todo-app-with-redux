@@ -34,8 +34,7 @@ const AddTodoModal = () => {
   //*for locat state management
   // const dispatch = useAppDispatch();
 
-  const [addTodo, { isLoading, isError, data, isSuccess }] =
-    useAddTodoMutation(); //[actualFunctionForPost, {data,isLoading,isError etc.}]
+  const [addTodo, { isLoading, isError, data, isSuccess }] = useAddTodoMutation(); //[actualFunctionForPost, {data,isLoading,isError etc.}]
 
   console.log({ data, isLoading, isError });
 
@@ -44,7 +43,9 @@ const AddTodoModal = () => {
     // const randomString = Math.random().toString(36).substring(2, 7);
     const taskDetails = {
       title: task,
-      description: description,
+      isCompleted : false,
+      description,
+      priority,
     };
 
     //*For local state management
@@ -93,9 +94,9 @@ const AddTodoModal = () => {
               <Label htmlFor="priority" className="text-right">
                 Priority
               </Label>
-              <Select>
+              <Select onValueChange={(value) => setPriority(value)}>
                 <SelectTrigger className="col-span-3">
-                  <SelectValue placeholder="Select a fruit" />
+                  <SelectValue placeholder="Set Priority" />
                 </SelectTrigger>
                 <SelectContent>
                   <SelectGroup>

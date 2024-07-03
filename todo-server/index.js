@@ -56,7 +56,7 @@ const run = async () => {
 
     app.delete('/task/:id', async (req, res) => {
       const id = req.params.id;
-      const result = await taskCollection.deleteOne({ _id: ObjectId(id) });
+      const result = await taskCollection.deleteOne({ _id:new ObjectId(id) });
       // console.log(result);
       res.send(result);
     });
