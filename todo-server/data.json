@@ -1,34 +1,34 @@
 [
   {
-    "status": "Pending",
+    "isCompleted" : false,
     "title": "Finish report",
     "description": "Complete the quarterly financial report",
     "dateTime": "2024-07-01T09:00:00Z",
     "priority": "high"
   },
   {
-    "status": "Done",
+    "isCompleted" : true,
     "title": "Team meeting",
     "description": "Attend the weekly team sync-up meeting",
     "dateTime": "2024-06-30T11:00:00Z",
     "priority": "medium"
   },
   {
-    "status": "Pending",
+    "isCompleted" : false,
     "title": "Update website",
     "description": "Make updates to the company website for the new product launch",
     "dateTime": "2024-07-02T14:00:00Z",
     "priority": "high"
   },
   {
-    "status": "Pending",
+    "isCompleted" : false,
     "title": "Call supplier",
     "description": "Contact the supplier to confirm the delivery dates",
     "dateTime": "2024-07-01T16:00:00Z",
     "priority": "low"
   },
   {
-    "status": "Pending",
+    "isCompleted" : false,
     "title": "Write blog post",
     "description": "Draft a blog post for the company blog about the new features",
     "dateTime": "2024-07-03T10:00:00Z",

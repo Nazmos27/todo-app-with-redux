@@ -28,10 +28,21 @@ const todoSlice = createSlice({
     toggleCompleted : (state, action : PayloadAction<string>) => {
       const task = state.todos.find((item) => item.id === action.payload)
       task!.isCompleted = !task?.isCompleted //here ! used for implicit type or something like that
+    },
+    sortTodos : (state) => {
+      state.todos = state.todos.sort((a, b) => {
+        if (a.isCompleted < b.isCompleted) {
+          return -1;
+        }
+        if (a.isCompleted > b.isCompleted) {
+          return 1;
+        }
+        return 0;
+      });
     }
   },
 });
 
-export const { addTodo, deleteTodo, toggleCompleted } = todoSlice.actions;
+export const { addTodo, deleteTodo, toggleCompleted, sortTodos } = todoSlice.actions;
 
 export default todoSlice.reducer;
