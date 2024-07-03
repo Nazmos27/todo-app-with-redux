@@ -49,7 +49,7 @@ const run = async () => {
 
     app.get('/task/:id', async (req, res) => {
       const id = req.params.id;
-      const result = await taskCollection.findOne({ _id: ObjectId(id) });
+      const result = await taskCollection.findOne({ _id: new ObjectId(id) });
       // console.log(result);
       res.send(result);
     });
@@ -66,7 +66,7 @@ const run = async () => {
       const id = req.params.id;
       console.log(id);
       const task = req.body;
-      const filter = { _id: ObjectId(id) };
+      const filter = { _id: new ObjectId(id) };
       const updateDoc = {
         $set: {
           isCompleted: task.isCompleted,
